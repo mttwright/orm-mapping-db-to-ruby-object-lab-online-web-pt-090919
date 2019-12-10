@@ -24,8 +24,12 @@ class Student
 
   def self.find_by_name(name)
     sql = <<-SQL
-      
+      SELECT * FROM students
+      WHERE name = ?
     SQL
+    
+    student = DB[:conn].execute(sql, name)
+    self.new_from_db(student)
   end
   
   def save
