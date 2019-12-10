@@ -77,6 +77,6 @@ class Student
       WHERE grade < 12
     SQL
     
-    
+    DB[:]
   end
 end
