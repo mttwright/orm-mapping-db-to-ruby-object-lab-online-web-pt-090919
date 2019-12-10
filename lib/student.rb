@@ -16,6 +16,10 @@ class Student
     
     student_array = DB[:conn].execute(sql)
     
+    student_array.map do |student|
+      self.new_from_db(student)
+    end
+    
   end
 
   def self.find_by_name(name)
