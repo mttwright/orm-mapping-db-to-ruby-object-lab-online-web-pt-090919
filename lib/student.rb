@@ -69,6 +69,9 @@ class Student
     DB[:conn].execute(sql).map do |student|
       self.new_from_db(student)
     end
+  end
+  
+  def self.students_below_12th_grade
     
   end
 end
