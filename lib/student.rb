@@ -29,8 +29,6 @@ class Student
     SQL
     
     student = DB[:conn].execute(sql, name)
-    ham = self.new_from_db(student)
-    ham
   end
   
   def save
