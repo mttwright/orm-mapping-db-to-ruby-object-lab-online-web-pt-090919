@@ -81,4 +81,6 @@ class Student
       self.new_from_db(student)
     end
   end
+  
+  def self.first_X_students_in_grade
 end
